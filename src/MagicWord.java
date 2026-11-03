@@ -1,6 +1,6 @@
 public class MagicWord {
     private static final String[] words = {"futbol","ribesalbes",
-            "felicidad", "muerte","español"};
+            "felicidad", "muerte","español", "hallowen", "nico", "feo", "cristiano", "ronaldo", "sergi", "juan", "mbappe", "pokemon", "gta", "madrid", "niga", "dictador", "reina", "calvo", "vini", "funeral", "virgen", "eugen", "alejandro", "chatgpt", "vox", "psoe", "spiderman", "programacion", "ordenador", "sandia", "melon", "ladron", "raton", "pereira", "komanche", "pache", "limpiar", "vaca", "museo", "fortnite", "hormiga", "pikachu", "homosexual", "dedos", "castellon", "mono", "fumar", "cigarro", "irene", "abecedario", "pizarra", "cabeza", "monitor", "madre", "array", "llorar", "cansancio", "examen", "perro", "sanchez"};
     private String word;
     private boolean[] rightLetters;
     public MagicWord() {
