@@ -1,12 +1,12 @@
 public class MagicWord {
-    private static final String[] words = {"futbol","ribesalbes",
+    private static final String[] palabras = {"futbol","ribesalbes",
             "felicidad", "muerte","español", "hallowen", "nico", "feo", "cristiano", "ronaldo", "sergi", "juan", "mbappe", "pokemon", "gta", "madrid", "niga", "dictador", "reina", "calvo", "vini", "funeral", "virgen", "eugen", "alejandro", "chatgpt", "vox", "psoe", "spiderman", "programacion", "ordenador", "sandia", "melon", "ladron", "raton", "pereira", "komanche", "pache", "limpiar", "vaca", "museo", "fortnite", "hormiga", "pikachu", "homosexual", "dedos", "castellon", "mono", "fumar", "cigarro", "irene", "abecedario", "pizarra", "cabeza", "monitor", "madre", "array", "llorar", "cansancio", "examen", "perro", "sanchez"};
-    private String word;
-    private boolean[] rightLetters;
+    private final String palabra;
+    private final boolean[] rightLetters;
     public MagicWord() {
-        int index = (int) (Math.random() * words.length);
-        word = words[index];
-        rightLetters = new boolean[word.length()];
+        int index = (int) (Math.random() * palabras.length);
+        palabra = palabras[index];
+        rightLetters = new boolean[palabra.length()];
         for (int i = 0; i < rightLetters.length; i++) {
             rightLetters[i] = false;
         }
@@ -20,23 +20,20 @@ public class MagicWord {
         }
     }
     private void checkChar(char ch) {
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == Character.toLowerCase(ch)) {
+        for (int i = 0; i < palabra.length(); i++) {
+            if (palabra.charAt(i) == Character.toLowerCase(ch)) {
                 rightLetters[i] = true;
             }
         }
     }
     private boolean checkWord(String s) {
-        if (s.equalsIgnoreCase(word)) {
-            return true;
-        }
-        return false;
+        return s.equalsIgnoreCase(palabra);
     }
     public String getUnderscoreString() {
         String s = "";
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < palabra.length(); i++) {
             if (rightLetters[i]) {
-                s += word.charAt(i);
+                s += palabra.charAt(i);
             } else {
                 s += "_";
             }
